@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamX | Premium Movie Discovery</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <header>
+        <div class="logo">STREAMX</div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for movies..." oninput="searchMovie()">
+        </div>
+    </header>
+
+    <div id="loader" class="loader"></div>
+
+    <main id="movies">
+        </main>
+
+    <div id="movieModal" class="modal" onclick="closeModalOutside(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
